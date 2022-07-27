@@ -1,0 +1,7 @@
+name: UniversalTransmitters
+main: me.steep.universaltransmitters.UniversalTransmitters
+version: 0.0.1
+api-version: 1.19
+commands:
+  getpipe:
+    description: Gives pipes.
