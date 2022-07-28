@@ -14,7 +14,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.VisibleForTesting;
 
 @VisibleForTesting
-public class PipeCommand implements CommandExecutor {
+public class TransmitterCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command cmd, @NotNull String label, @NotNull String[] args) {
@@ -27,11 +27,11 @@ public class PipeCommand implements CommandExecutor {
 
             switch (args[0].toLowerCase()) {
 
-                case "liquid" -> p.getInventory().addItem(DataHandler.setDataString(new ItemStack(Material.STICK, 64), "pipe_type", LiquidTransmitter.class.getCanonicalName()));
+                case "liquid" -> p.getInventory().addItem(DataHandler.setDataString(new ItemStack(Material.STICK, 64), "transmitter_type", LiquidTransmitter.class.getCanonicalName()));
 
-                case "redstone" -> p.getInventory().addItem(DataHandler.setDataString(new ItemStack(Material.STICK, 64), "pipe_type", RedstoneTransmitter.class.getCanonicalName()));
+                case "redstone" -> p.getInventory().addItem(DataHandler.setDataString(new ItemStack(Material.STICK, 64), "transmitter_type", RedstoneTransmitter.class.getCanonicalName()));
 
-                default -> p.getInventory().addItem(DataHandler.setDataString(new ItemStack(Material.STICK, 64), "pipe_type", ItemTransmitter.class.getCanonicalName()));
+                default -> p.getInventory().addItem(DataHandler.setDataString(new ItemStack(Material.STICK, 64), "transmitter_type", ItemTransmitter.class.getCanonicalName()));
 
             }
 

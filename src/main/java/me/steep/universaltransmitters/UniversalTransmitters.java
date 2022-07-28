@@ -1,6 +1,6 @@
 package me.steep.universaltransmitters;
 
-import me.steep.universaltransmitters.commands.PipeCommand;
+import me.steep.universaltransmitters.commands.TransmitterCommand;
 import me.steep.universaltransmitters.handlers.DataHandler;
 import me.steep.universaltransmitters.listeners.InteractListener;
 import org.bukkit.Bukkit;
@@ -28,7 +28,7 @@ public class UniversalTransmitters extends JavaPlugin {
     }
 
     private void registerCommands(UniversalTransmitters instance) {
-        getCommand("getpipe").setExecutor(new PipeCommand());
+        getCommand("trans").setExecutor(new TransmitterCommand());
     }
 
     private static UniversalTransmitters instance;
